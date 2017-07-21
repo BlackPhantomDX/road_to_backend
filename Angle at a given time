@@ -1,0 +1,17 @@
+import math
+timestamp = input("Enter the current time (HH:MM)")
+
+nums = timestamp.split(":")
+
+hours = (int(nums[0]) * 30 + int(nums[1]) * .5)
+minutes = (int(nums[1]) * 6)
+
+angle = abs(hours - minutes)
+
+if angle > 180:
+  angle = 360 - angle
+  print ("This time creates a %s degree angle." % angle)
+else:
+  print ("This time creates a %s degree angle." % angle)
+
+
