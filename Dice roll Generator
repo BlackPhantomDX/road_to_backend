@@ -1,0 +1,26 @@
+from random import *
+
+print ("Welcome to the Dice roll Generator!" "\n")
+
+while True:
+  try:
+    d_sides = int(input("Please input the number of sides of the dice: "))
+    n_dices = int(input("Please input the number of dices to roll: "))
+    break
+  except:
+    print ("Invalid entry, please try again." "\n")
+
+dice_value = 0
+total = 0
+dices_values = []
+counter = 0
+
+for i in range(n_dices):
+  dice_value = randint(1, d_sides)
+  dices_values.append(dice_value)
+  total += dice_value
+
+for a in dices_values:
+  counter += 1
+  print ("Dice %s rolled a %s." % (counter, a))
+print ("The total is: %s" % total)
